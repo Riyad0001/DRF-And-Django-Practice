@@ -1,0 +1,70 @@
+<!-- templates/traffic/intersections.html -->
+{% extends 'base.html' %}
+{% block content %}
+<h1>Intersections</h1>
+<ul>
+  {% for intersection in intersections %}
+    <li>{{ intersection.name }} - {{ intersection.location }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} <!-- templates/traffic/user_dashboard.html -->
+{% extends 'traffic/base.html' %}
+{% block content %}
+<h1>User Dashboard</h1>
+<!-- Display personalized traffic conditions, events, and notifications -->
+{% endblock %}
+
+<!-- templates/traffic/admin_dashboard.html -->
+{% extends 'traffic/base.html' %}
+{% block content %}
+<h1>Admin Dashboard</h1>
+<!-- Display admin tools and data management features -->
+{% endblock %}
+
+<!-- templates/traffic/analytics.html -->
+{% extends 'traffic/base.html' %}
+{% block content %}
+<h1>Analytics</h1>
+<!-- Display traffic data analytics and visualizations -->
+{% endblock %}
+
+<!-- templates/traffic/notification_settings.html -->
+{% extends 'traffic/base.html' %}
+{% block content %}
+<h1>Notification Settings</h1>
+<!-- Allow users to manage their notification preferences -->
+{% endblock %}
+
+<!-- templates/traffic/feedback_summary.html -->
+{% extends 'traffic/base.html' %}
+{% block content %}
+<h1>Feedback Summary</h1>
+<!-- Show summarized user feedback and ratings for intersections -->
+{% endblock %}
+
+<!-- templates/traffic/real_time_map.html -->
+{% extends 'traffic/base.html' %}
+{% block content %}
+<h1>Real-time Map</h1>
+<!-- Display a real-time map with traffic conditions and events -->
+{% endblock %}
+
+<!-- templates/traffic/help_support.html -->
+{% extends 'traffic/base.html' %}
+{% block content %}
+<h1>Help & Support</h1>
+<!-- Provide users with help and support information -->
+{% endblock %} {% endcomment %}

@@ -1,0 +1,5 @@
+Username: riyad14
+Password: 1234Qqqq
+
+Store ID: harun67d414cb1861c
+Store Password (API/Secret Key): harun67d414cb1861c@ssl

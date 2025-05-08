@@ -1,0 +1,18 @@
+<!-- templates/traffic/user_profile.html -->
+{% extends 'traffic/base.html' %}
+{% block content %}
+<h1>User Profile</h1>
+<h2>Feedback History</h2>
+<ul>
+  {% for feedback in user_feedback %}
+    <li>{{ feedback.intersection.name }} - {{ feedback.feedback }} ({{ feedback.timestamp }})</li>
+  {% endfor %}
+</ul>
+
+<h2>Traffic Violations</h2>
+<ul>
+  {% for violation in traffic_violations %}
+    <li>{{ violation.intersection.name }} - {{ violation.violation_type }} ({{ violation.timestamp }})</li>
+  {% endfor %}
+</ul>
+{% endblock %}

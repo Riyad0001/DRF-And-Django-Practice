@@ -1,0 +1,17 @@
+<!-- templates/traffic/user_feedback.html -->
+{% extends 'traffic/base.html' %}
+{% block content %}
+<h1>User Feedback</h1>
+<form method="post">
+  {% csrf_token %}
+  <label for="intersection">Intersection:</label>
+  <select name="intersection_id" id="intersection">
+    {% for intersection in intersections %}
+      <option value="{{ intersection.id }}">{{ intersection.name }}</option>
+    {% endfor %}
+  </select>
+  <label for="feedback">Feedback:</label>
+  <textarea name="feedback" id="feedback"></textarea>
+  <button type="submit">Submit</button>
+</form>
+{% endblock %}

@@ -1,0 +1,10 @@
+<!-- templates/traffic/traffic_events.html -->
+{% extends 'traffic/base.html' %}
+{% block content %}
+<h1>Traffic Events</h1>
+<ul>
+  {% for event in traffic_events %}
+    <li>{{ event.event_type }} at {{ event.intersection.name }} ({{ event.timestamp }})</li>
+  {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,39 @@
+<!-- templates/traffic/base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Traffic Management</title>
+    <link rel="stylesheet" href="{% static 'traffic/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Smart Traffic Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'intersections' %}">Intersections</a></li>
+                <li><a href="{% url 'traffic_events' %}">Traffic Events</a></li>
+                <li><a href="{% url 'user_feedback' %}">User Feedback</a></li>
+                <li><a href="{% url 'user_profile' %}">User Profile</a></li>
+                <li><a href="{% url 'traffic_violation' %}">Traffic Violations</a></li>
+                <li><a href="{% url 'route_optimization' %}">Route Optimization</a></li>
+                <li><a href="{% url 'user_dashboard' %}">User Dashboard</a></li>
+                <li><a href="{% url 'admin_dashboard' %}">Admin Dashboard</a></li>
+                <li><a href="{% url 'analytics' %}">Analytics</a></li>
+                <li><a href="{% url 'notification_settings' %}">Notification Settings</a></li>
+                <li><a href="{% url 'feedback_summary' %}">Feedback Summary</a></li>
+                <li><a href="{% url 'real_time_map' %}">Real-time Map</a></li>
+                <li><a href="{% url 'help_support' %}">Help & Support</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

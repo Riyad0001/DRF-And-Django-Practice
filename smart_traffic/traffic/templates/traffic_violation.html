@@ -1,0 +1,17 @@
+<!-- templates/traffic/traffic_violation.html -->
+{% extends 'traffic/base.html' %}
+{% block content %}
+<h1>Report Traffic Violation</h1>
+<form method="post">
+  {% csrf_token %}
+  <label for="intersection">Intersection:</label>
+  <select name="intersection_id" id="intersection">
+    {% for intersection in intersections %}
+      <option value="{{ intersection.id }}">{{ intersection.name }}</option>
+    {% endfor %}
+  </select>
+  <label for="violation_type">Violation Type:</label>
+  <input type="text" name="violation_type" id="violation_type">
+  <button type="submit">Submit</button>
+</form>
+{% endblock %}

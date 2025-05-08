@@ -1,0 +1,142 @@
+:root {
+    --primary-color: #2A5C82;    /* Deep Trustworthy Blue */
+    --secondary-color: #FF6B35;   /* Warm Action Orange */
+    --accent-color: #8ACB88;      /* Fresh Green */
+    --light-bg: #F8F9FA;
+}
+
+/* Modern Navbar */
+.navbar {
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary-color) !important;
+    font-size: 1.5rem;
+}
+
+.navbar-brand i {
+    color: var(--secondary-color);
+    margin-right: 8px;
+}
+
+.nav-link {
+    color: var(--primary-color) !important;
+    margin: 0 15px;
+    padding: 8px 15px !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(var(--primary-color), 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    background: var(--primary-color) !important;
+    color: white !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(45deg, var(--primary-color), #1a4461);
+    color: white;
+    padding: 120px 0;
+}
+
+/* CTAs */
+.cta-btn {
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta-primary {
+    background: var(--secondary-color);
+    color: white;
+    border: 2px solid var(--secondary-color);
+}
+
+.cta-primary:hover {
+    background: #ff5a1f;
+    transform: translateY(-3px);
+}
+
+.cta-secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.cta-secondary:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+/* Info Cards */
+.info-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer */
+.main-footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer-link {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    color: white;
+    transform: translateX(5px);
+}
+.nothing-doi{
+    height:350px;
+}
+body{
+    background-color:white;
+}
+.login-container{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items:center;
+    width:75%;
+    margin: auto;
+}
+.input{
+    padding: 15px 25px;
+    border: none;
+    margin: 10px;
+    box-shadow: 4px 4px 8px gray;
+    border-radius: 5px;
+}
+.submit-btn{
+    padding: 15px 25px;
+    width:85%;
+    margin: auto;
+    border: none;
+    background-color: rgb(43, 121, 121);
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+}

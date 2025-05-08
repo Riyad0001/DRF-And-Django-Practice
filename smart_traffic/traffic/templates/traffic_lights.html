@@ -1,0 +1,10 @@
+<!-- templates/traffic/traffic_lights.html -->
+{% extends 'traffic/base.html' %}
+{% block content %}
+<h1>Traffic Lights</h1>
+<ul>
+  {% for traffic_light in traffic_lights %}
+    <li>{{ traffic_light.status }} (Last Updated: {{ traffic_light.last_updated }})</li>
+  {% endfor %}
+</ul>
+{% endblock %}
